@@ -1,0 +1,174 @@
+@font-face {
+    font-family: "TT Lakes";
+    src: url("./font/TTLakes-Regular.woff") format(woff);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "TT Lakes";
+    src: url("./font/TTLakes-Bold.woff") format(woff);
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "TT Lakes";
+    src: url("./font/TTLakes-DemiBold.woff") format(woff);
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+html{
+    font-family: 'TT Lakes', sans-serif;
+}
+
+body{
+    width: 320px;
+    min-height: 750px;
+    box-shadow: 16px 0px 52px 0px #0E185033,
+    -2px 0px 4px 0px #454F7E05;
+    color: #1B1C21;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Хедер */
+.round-icon-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding:20px;
+}
+
+.round-icon-header--visualization {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+.round-icon-header--cross{
+    background-image: url(imeges/bacground/cross.png);
+}
+.logo__image{
+    width: 97px;
+    height: 51px;
+}
+.round-icon-header--search{
+    background-image: url(imeges/bacground/search.png);
+    margin-left: auto;
+}
+
+/* main */
+
+.navigator-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    padding: 30px 0;   
+}
+
+.navigator-list__link{
+    color:#1B1C21;
+    font-weight: 600;
+    margin-left:20px; 
+    display: flex;
+    align-items: center;  
+}
+
+.navigator-list__link:hover,
+.navigator-list__repair
+  {
+    color: #7E7E82;
+    font-weight: 400;
+    transition-duration: 2s;
+}
+
+
+.navigator-list__link:hover.navigator-list__link::after,
+.navigator-list__repair.navigator-list__link::after {
+    border: 2px solid #41F6D7; 
+    background-color: #41F6D7;
+    transition-duration: 1s;
+}
+
+.navigator-list__link::after{
+    content: "";
+    border-radius: 0px 6px 6px 0px ;
+    border: 2px solid transparent; 
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 32px;
+}
+    
+
+/* футер */
+
+  .footer--style{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: auto;
+  }
+
+.round-icon-footer{
+    display: flex;
+    
+    column-gap: 10px;
+}
+
+.round-icon-footer--call{
+    background-image: url(imeges/bacground/call.png);
+}
+
+.round-icon-footer--chat{
+    background-image: url(imeges/bacground/chat.png);
+}
+
+.round-icon-footer--profile{
+    background-image: url(imeges/bacground/profile.png);
+}
+.round-icon-header--visualization:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+}
+
+.footer__mail{
+    font-weight: 600;
+    margin:10px 0;
+}
+
+.footer__phone{
+    font-size: 24px;
+    font-weight: 900;
+    margin:0 0 40px 0;
+}
+
+.footer__lang{
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.lang--color{
+    color: #1B1C21;
+    font-weight: 600;
+}
+
+.lang--color:hover,
+.lang__ru{
+    color: #7E7E82 ;
+    font-weight: 400;
+    transition-duration: 1s;
+}
+
+
+
+
+
