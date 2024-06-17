@@ -44,9 +44,9 @@ body{
     padding:20px;
 }
 
-.round-icon-header--visualization {
-    width: 45px;
-    height: 45px;
+.round-icon--visualization {
+    width: 40px;
+    height: 40px;
     display: inline-block;
     background-repeat: no-repeat;
 }
@@ -68,7 +68,7 @@ body{
 .navigator-list{
     display: flex;
     flex-direction: column;
-    row-gap: 32px;
+    row-gap: 10px;
     padding: 30px 0;   
 }
 
@@ -77,23 +77,23 @@ body{
     font-weight: 600;
     margin-left:20px; 
     display: flex;
-    align-items: center;  
+    align-items: center; 
+    transition-property: color ;
+    transition-duration: 1s; 
+    height: 45px;
 }
 
 .navigator-list__link:hover,
-.navigator-list__repair
+.navigator-list--repair
   {
-    color: #7E7E82;
+    color: #827e7e;
     font-weight: 400;
-    transition-duration: 2s;
 }
 
-
 .navigator-list__link:hover.navigator-list__link::after,
-.navigator-list__repair.navigator-list__link::after {
+.navigator-list--repair.navigator-list__link::after {
     border: 2px solid #41F6D7; 
     background-color: #41F6D7;
-    transition-duration: 1s;
 }
 
 .navigator-list__link::after{
@@ -105,6 +105,8 @@ body{
     left: 0;
     width: 4px;
     height: 32px;
+    transition-property: border, background-color ;
+    transition-duration: 1s; 
 }
     
 
@@ -115,12 +117,14 @@ body{
     flex-direction: column;
     padding: 20px;
     margin-top: auto;
+    gap: 10px;
   }
 
 .round-icon-footer{
     display: flex;
+    column-gap: 8px;
     
-    column-gap: 10px;
+    align-items: center;
 }
 
 .round-icon-footer--call{
@@ -134,9 +138,13 @@ body{
 .round-icon-footer--profile{
     background-image: url(imeges/bacground/profile.png);
 }
-.round-icon-header--visualization:hover{
-    transform: scale(1.2);
+
+.round-icon--visualization{
     transition-duration: 1s;
+}
+
+.round-icon--visualization:hover{
+    transform: scale(1.2);
 }
 
 .footer__mail{
@@ -150,22 +158,22 @@ body{
     margin:0 0 40px 0;
 }
 
-.footer__lang{
+.lang{
     display: flex;
     column-gap: 10px;
-    margin-bottom: 10px;
 }
 
 .lang--color{
     color: #1B1C21;
     font-weight: 600;
+    transition-property: color;
+    transition-duration: 1s;
 }
 
 .lang--color:hover,
-.lang__ru{
+.lang--color:nth-child(1){
     color: #7E7E82 ;
     font-weight: 400;
-    transition-duration: 1s;
 }
 
 
